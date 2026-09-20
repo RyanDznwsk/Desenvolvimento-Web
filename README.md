@@ -1,8 +1,8 @@
-# Web-Development
+# Desenvolvimente Web
 ____
-Web Development class repository
+Repositório das aulas de Desenvolvimento Web
 ____
-# Repository Content
-- Site Creation;
-  - HTML activities;
-  - CSS activities;
+# Conteúdo do Repositório
+- Criação de Site;
+  - Atividades HTML;
+  - Atividades CSS;
