@@ -54,3 +54,17 @@ main div.container ul.cards li.card p.velocidade span {
     font-size: 1.35rem;
     font-weight: 800;
 }
+main div.container ul.cards li.card div {
+    border-top: 1px #e9eaf0 solid;
+    padding-top: 0.35rem;
+}
+main div.container ul.cards li.card div ul li {
+    color: #45505e;
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+    margin-bottom: 0.2rem;
+}
+main div.container ul.cards li.card div ul li svg {
+    width: 1rem;
+}
