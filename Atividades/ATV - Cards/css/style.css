@@ -1,0 +1,56 @@
+/* ==== FORMATAÇÃO GERAL === */
+html{
+    font-size: clamp(1rem, 2vw + 0.8rem, 3rem);
+    font-family: "Inter", sans-serif;
+}
+body {
+    color: #081422;
+    background-color: #fdfdfd;
+    height: 100vh;
+}
+
+/* === Main === */
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main div.container {
+    padding: 0.8rem 0.5rem;
+}
+main div.container ul.cards {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+main div.container ul.cards li.card {
+    font-size: 0.5rem;
+    padding: 0.65rem 0.6rem;
+    border: 2px #e9eaf0 solid;
+    border-radius: 12px;
+}
+main div.container ul.cards li.card h2 {
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+main div.container ul.cards li.card p.velocidade {
+    font-size: 0.65rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+main div.container ul.cards li.card p.basico {
+    color: #0067fd;
+}
+main div.container ul.cards li.card p.intermediario {
+    color: #017d3e;
+}
+main div.container ul.cards li.card p.avancado {
+    color: #792ae7;
+}
+main div.container ul.cards li.card p.velocidade span {
+    font-size: 1.35rem;
+    font-weight: 800;
+}

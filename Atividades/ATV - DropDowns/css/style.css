@@ -30,12 +30,12 @@ header nav {
     background-color: #1e2833;
     border-radius: 8px;
 }
-header nav > ul {
+header nav ul.nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-header nav > ul li {
+header nav ul.nav li.link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,16 +43,16 @@ header nav > ul li {
     width: 100%;
     position: relative;
 }
-header nav > ul li.active {
+header nav ul.nav li.active {
     background-color: #215199;
 }
-header nav > ul li:hover svg {
+header nav ul.nav li:hover svg {
     transform: rotate(90deg);
 }
-header nav > ul li.active:hover svg {
+header nav ul.nav li.active:hover svg {
     transform: rotate(-90deg);
 }
-header nav > ul > li > a {
+header nav ul.nav li.link > a {
     display: inline-flex;
     font-size: 0.6rem;
     justify-content: center;
@@ -61,17 +61,18 @@ header nav > ul > li > a {
     height: 100%;
     width: 100%;
 }
-header nav > ul li > a svg {
+header nav ul.nav li.link svg {
     width: 0.6rem;
     height: 0.6rem;
     transition: 100ms ease-in-out;
 }
-header nav > ul li div {
+header nav ul.nav li.link div {
+    text-align: left;
     color: #1e2833;
     background-color: #f8f9fb;
     box-shadow: 0px 10px 15px #00000049;
     max-height: 0;
-    width: 3rem;
+    width: 7rem;
     opacity: 0;
     position: absolute;
     left: 0.05rem;
@@ -80,21 +81,25 @@ header nav > ul li div {
     z-index: 10;
     transition: 150ms ease-in-out;
 }
-header nav > ul li div ul li {
+header nav ul.nav li.link div ul {
+    display: none;
+}
+header nav ul.nav li.link div ul li {
     color: #1e2833;
     font-size: 0.5rem;
-    padding: 0.5rem 0.25rem 0 0.25rem;
 }
-header nav > ul li div ul li:not(:nth-last-of-type(1)) {
+header nav ul.nav li.link div ul li a {
+    display: inline-block;
+    width: 100%;
     padding: 0.5rem 0.25rem;
 }
-header nav > ul li.active div {
+header nav ul.nav li.link div ul li:not(:nth-last-of-type(1)) a {
+    padding: 0.5rem 0.25rem 0 0.25rem;
+}
+header nav ul.nav li.active div {
     max-height: 16rem;
     opacity: 1;
 }
-header nav > ul li div ul {
-    display: none;
-}
-header nav > ul li.active div ul {
+header nav ul.nav li.active div ul {
     display: block;
 }
