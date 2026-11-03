@@ -218,8 +218,19 @@ footer {
     background: white;
     color: #5b6780;
 }
-.confirmar {
+button.confirmar {
     border: 2px solid #1763f5;
     background: #1763f5;
     color: white;
+    cursor: not-allowed;
+}
+form label {
+    text-align: center;
+}
+form input {
+    display: block;
+    width: 14.5rem;
+    margin: auto;
+    margin-bottom: 0.5rem;
+    outline: none;
 }
