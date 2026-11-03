@@ -99,14 +99,17 @@ main div.container div.cupons {
 }
 main div.container div.cupons input {
     text-transform: uppercase;
-    color: #dddddd;
     font-size: 0.315rem;
     font-weight: 500;
     display: block;
     width: 100%;
     padding: 0.2rem;
+    outline: none;
     border: 1px #dddddd solid;
     border-radius: 8px;
+}
+main div.container div.cupons input:hover {
+    border: 1px #8c8c8c solid;
 }
 main div.container div.cupons button {
     color: #fefefe;
