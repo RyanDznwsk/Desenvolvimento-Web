@@ -13,7 +13,7 @@
 <body>
     <main>
         <div class="container">
-            <h1><span>R$</span><span id="diaria">620</span> noite</h1>
+            <h1><span>R$</span><span class="diaria"></span> noite</h1>
             <form>
                 <div class="check-in" id="check-in">
                     <label for="check-in">Check-in</label>
@@ -26,10 +26,10 @@
                 <div class="hospedes" id="hospedes">
                     <label for="hospedes">Hóspedes</label>
                     <select name="hospedes" id="hospedes">
-                        <option value="1">1 hóspede</option>
-                        <option value="2">2 hóspedes</option>
-                        <option value="3">3 hóspedes</option>
-                        <option value="4">4 hóspedes</option>
+                        <option value="0">1 hóspede</option>
+                        <option value="20">2 hóspedes</option>
+                        <option value="40">3 hóspedes</option>
+                        <option value="60">4 hóspedes</option>
                     </select>
                 </div>
             </form>
@@ -43,7 +43,7 @@
             </p>
             <ul>
                 <li>
-                    <span class="item">R$ <span id="diaria">620</span> &times; <span id="noites"></span> noites</span>
+                    <span class="item">R$ <span class="diaria">620</span> &times; <span id="noites"></span> noites</span>
                     <span>R$<span id="valorDiaria"></span></span>
                 </li>
                 <li>
