@@ -1,0 +1,86 @@
+/* ==== FORMATAÇÃO GERAL === */
+html{
+    font-size: clamp(1rem, 2vw + 0.8rem, 3rem);
+    font-family: "Inter", sans-serif;
+}
+body {
+    color: #010e25;
+    background-color: #fdfdfd;
+    height: 100vh;
+}
+
+/* === Main === */
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main div.container {
+    box-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a;
+    padding: 0.8rem 1rem;
+    width: 14.5rem;
+    border: 2px #1e6ae2 solid;
+    border-radius: 8px;
+}
+main div.container h1 {
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+main div.container form label {
+    font-size: 0.4rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    display: block;
+}
+main div.container form input {
+    font-size: 0.4rem;
+    margin-bottom: 0.6rem;
+    display: block;
+    width: 100%;
+    padding: 0.3rem;
+    outline: none;
+    border: 2px #e7e6eb solid;
+    border-radius: 8px;
+    transition: 100ms ease-in-out;
+}
+main div.container form input[name="renda"]:focus {
+    border: 2px #1951ad solid;
+}
+main div.container form input[name="emprestimo"]:focus {
+    border: 2px #259b4e solid;
+}
+main div.container form input[name="prazo"]:focus {
+    border: 2px #7d44cc solid;
+}
+main div.container form input:hover {
+    border: 2px #b8b7ba solid;
+}
+main div.container form button {
+    color: #fdfdfd;
+    font-size: 0.45rem;
+    font-weight: 500;
+    padding: 0.4rem;
+    width: 100%;
+    background-color: #1e6ae2;
+    border-radius: 8px;
+    cursor: pointer;
+}
+main div.container div.resultado {
+    text-align: center;
+    font-size: 0.4rem;
+    padding: 0.3rem;
+    background-color: #f3f9fe;
+    border: 2px #e7eefa solid;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+}
+main div.container div.resultado h2 {
+    color: #1e6ae2;
+    font-size: 0.45rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}

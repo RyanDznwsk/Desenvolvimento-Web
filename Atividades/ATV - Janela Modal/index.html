@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janela Modal</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="container topo">
+        <h1><a class="logo" href="#inicio"><img src="https://placehold.co/155x48/ffffff/17243e?text=%E2%97%88+EVENTO" alt="Evento"></a></h1>
+        <ul class="menu">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#programacao">Programação</a></li>
+            <li><a href="#sobre">Sobre o evento</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+        <p><a class="botao" href="#inscricao">Inscreva-se</a></p>
+    </header>
+    <main>
+        <section class="banner" id="inicio">
+            <div class="container">
+                <h1>Congresso de<br>Tecnologia e Inovação</h1>
+                <p>
+                    ▦  15 a 17 de novembro de 2026
+                </p>
+                <p>
+                    ♦  Centro de Convenções
+                </p>
+                <p><a class="botao" href="#inscricao">Faça sua inscrição</a></p>
+            </div>
+        </section>
+        <section class="programacao container" id="programacao">
+            <h2>Programação</h2>
+            <ul class="cards">
+                <li>
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&q=85" alt="Participantes em um congresso de tecnologia">
+                    <h3>15 de Novembro</h3>
+                    <p>
+                        Abertura do congresso, palestras sobre inovação e tendências tecnológicas.
+                    </p>
+                    <p><a href="#sobre">Saiba mais →</a></p>
+                </li>
+                <li>
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900&q=85" alt="Pessoas colaborando com computadores">
+                    <h3>16 de Novembro</h3>
+                    <p>
+                        Oficinas práticas, desenvolvimento web e inteligência artificial.
+                    </p>
+                    <p><a href="#sobre">Saiba mais →</a></p>
+                </li>
+                <li>
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&q=85" alt="Ambiente de encontro e troca de experiências">
+                    <h3>17 de Novembro</h3>
+                    <p>
+                        Apresentação de projetos, networking e encerramento do evento.
+                    </p>
+                    <p><a href="#sobre">Saiba mais →</a></p>
+                </li>
+            </ul>
+        </section>
+        <section class="sobre" id="sobre">
+            <h3>Sobre o evento</h3>
+            <p>
+                Três dias para compartilhar conhecimentos, descobrir tendências e conectar pessoas interessadas em tecnologia, criatividade e inovação.
+            </p>
+        </section>
+    </main>
+    <footer id="contato">
+        <p>
+            Congresso de Tecnologia e Inovação · 2026
+        </p>
+    </footer>
+    <div class="overlay" id="popupOverlay" hidden>
+        <div class="modal">
+            <button class="fechar" id="btnFechar"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#728096" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+            <div class="icone">
+                <svg width="125" height="125" viewBox="0 0 881.000000 634.000000"><g transform="translate(0.000000,634.000000) scale(0.100000,-0.100000)" fill="#1763f5" stroke="none"><path d="M3632 4365 c-63 -27 -94 -58 -123 -119 l-29 -61 1 -1190 c0 -1366 -7 -1259 88 -1307 l55 -28 713 0 c802 0 765 -3 801 71 21 43 21 57 22 492 0 490 0 495 -58 515 -38 13 -83 -6 -100 -42 -9 -20 -12 -134 -12 -436 l0 -410 -650 0 -650 0 0 1145 0 1145 650 0 650 0 0 -385 c0 -425 2 -443 57 -462 43 -16 88 6 101 49 7 20 12 185 13 433 2 393 2 401 -20 458 -27 69 -64 115 -108 133 -49 21 -1353 20 -1401 -1z"/><path d="M5381 3499 c-26 -26 -31 -38 -31 -81 l0 -50 122 -124 c67 -68 117 -124 112 -124 -5 -1 -263 0 -574 0 -311 0 -580 -2 -598 -6 -18 -4 -46 -20 -63 -36 -24 -25 -29 -38 -29 -78 0 -41 5 -53 30 -79 20 -20 44 -32 73 -36 23 -3 293 -5 600 -3 306 2 557 0 557 -4 0 -5 -4 -8 -8 -8 -5 0 -22 -12 -40 -27 -44 -40 -92 -78 -130 -107 -50 -36 -61 -56 -62 -108 0 -39 5 -52 31 -77 54 -54 128 -41 210 38 9 9 34 30 54 46 21 17 48 39 61 50 12 11 40 34 61 50 85 67 213 199 224 232 21 66 4 90 -240 336 l-226 227 -52 0 c-44 0 -56 -4 -82 -31z"/></g></svg>
+            </div>
+            <h2>Confirme a entrada</h2>
+            <p>
+                Você está prestes a acessar o evento. <br> Deseja continuar?
+            </p>
+            <div class="acoes">
+                <button class="cancelar" id="btnCancelar">Cancelar</button>
+                <button class="confirmar" id="btnConfirmar">Entrar</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/script.js"></script>
+</html>

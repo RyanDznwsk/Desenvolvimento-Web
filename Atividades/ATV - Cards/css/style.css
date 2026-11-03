@@ -27,44 +27,159 @@ main div.container ul.cards {
 }
 main div.container ul.cards li.card {
     font-size: 0.5rem;
-    padding: 0.65rem 0.6rem;
+    width: 7.1rem;
     border: 2px #e9eaf0 solid;
     border-radius: 12px;
+    transition: 100ms ease-in-out;
 }
-main div.container ul.cards li.card h2 {
+main div.container ul.cards li.card:hover {
+    border: 2px #bebfc5 solid;
+}
+main div.container ul.cards li.card.active {
+    transform: scale(1.05);
+}
+main div.container ul.cards li.basico.active {
+    border: 2px #0067fd solid;
+}
+main div.container ul.cards li.intermediario.active {
+    border: 2px #017d3e solid;
+}
+main div.container ul.cards li.avancado.active {
+    border: 2px #792ae7 solid;
+}
+main div.container ul.cards li.card div.card-header {
+    color: #017d3e;
+    font-size: 0.35rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.3rem 0;
+    background-color: #dcfaee;
+    border-radius: 12px 12px 0 0;
+    text-transform: uppercase;
+}
+main div.container ul.cards li.card div.card-content {
+    padding: 0.65rem 0.6rem;
+}
+main div.container ul.cards li.card div.card-content h1 {
     font-size: 0.7rem;
     font-weight: 700;
     margin-bottom: 0.3rem;
 }
-main div.container ul.cards li.card p.velocidade {
+main div.container ul.cards li.card div.card-content p.velocidade {
     font-size: 0.65rem;
     font-weight: 700;
     margin-bottom: 0.3rem;
 }
-main div.container ul.cards li.card p.basico {
+main div.container ul.cards li.card div.card-content p.basico {
     color: #0067fd;
 }
-main div.container ul.cards li.card p.intermediario {
+main div.container ul.cards li.card div.card-content p.intermediario {
     color: #017d3e;
 }
-main div.container ul.cards li.card p.avancado {
+main div.container ul.cards li.card div.card-content p.avancado {
     color: #792ae7;
 }
-main div.container ul.cards li.card p.velocidade span {
+main div.container ul.cards li.card div.card-content p.velocidade span {
     font-size: 1.35rem;
     font-weight: 800;
 }
-main div.container ul.cards li.card div {
+main div.container ul.cards li.card div.card-content div {
     border-top: 1px #e9eaf0 solid;
     padding-top: 0.35rem;
 }
-main div.container ul.cards li.card div ul li {
+main div.container ul.cards li.card div.card-content div ul {
+    margin-bottom: 0.6rem;
+}
+main div.container ul.cards li.card div.card-content div ul li {
     color: #45505e;
+    font-size: 0.38rem;
     display: flex;
     align-items: center;
-    gap: 0.15rem;
-    margin-bottom: 0.2rem;
 }
-main div.container ul.cards li.card div ul li svg {
-    width: 1rem;
+main div.container ul.cards li.card div.card-content div ul li:nth-of-type(1) {
+    gap: 0.45rem;
+    margin: 0 0 0.2rem 0.05rem;
+}
+main div.container ul.cards li.card div.card-content div ul li:nth-of-type(2) {
+    gap: 0.32rem;
+    margin-bottom: 0.15rem;
+}
+main div.container ul.cards li.card div.card-content div ul li:nth-of-type(3) {
+    gap: 0.45rem;
+    margin: 0 0 0.1rem 0.05rem;
+}
+main div.container ul.cards li.card div.card-content div ul li:nth-of-type(4) {
+    gap: 0.3rem;
+    margin-left: -0.12rem;
+}
+main div.container ul.cards li.card div.card-content div ul li svg {
+    display: block;
+    fill: #45505e;
+}
+main div.container ul.cards li.card div.card-content div ul li svg.wifi {
+    width: 0.55rem;
+    height: 0.55rem;
+}
+main div.container ul.cards li.card div.card-content div ul li svg.dispositivos {
+    width: 0.7rem;
+    height: 0.7rem;
+}
+main div.container ul.cards li.card div.card-content div ul li svg.web {
+    width: 0.55rem;
+    height: 0.55rem;
+}
+main div.container ul.cards li.card div.card-content div ul li svg.suporte {
+    width: 0.85rem;
+    height: 0.85rem;
+}
+main div.container ul.cards li.card div.card-content div > p {
+    display: flex;
+    margin-bottom: 0.3rem;
+}
+main div.container ul.cards li.card div.card-content div > p span:nth-of-type(1) {
+    font-size: 0.45rem;
+    font-weight: 500;
+    align-self: flex-start;
+    margin: 0.22rem 0.2rem 0 0;
+}
+main div.container ul.cards li.card div.card-content div > p span:nth-of-type(2) {
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+main div.container ul.cards li.card div.card-content div > p span:nth-of-type(3) {
+    font-size: 0.7rem;
+    font-weight: 800;
+    align-self: flex-end;
+    margin: 0 0 0.3rem -0.05rem;
+}
+main div.container ul.cards li.card div.card-content div > p span:nth-of-type(4) {
+    font-size: 0.4rem;
+    align-self: flex-end;
+    margin: 0 0 0.35rem 0.1rem;
+}
+main div.container ul.cards li.card div.card-content div button {
+    color: #fdfdfd;
+    font-size: 0.37rem;
+    width: 100%;
+    padding: 0.32rem 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+main div.container ul.cards li.card div.card-content div button.basico {
+    background-color: #0067fd;
+}
+main div.container ul.cards li.card div.card-content div button.intermediario {
+    background-color: #017d3e;
+}
+main div.container ul.cards li.card div.card-content div button.avancado {
+    background-color: #792ae7;
+}
+
+@media (max-width: 600px) {
+    main {
+        height: auto;
+    }
+    main div.container ul.cards {
+        flex-direction: column;
+    }
 }

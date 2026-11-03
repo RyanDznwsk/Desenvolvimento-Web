@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empréstimo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Simulador de Empréstimo</h1>
+            <form action="#" method="post">
+                <label for="renda">Renda Bruta Mensal (R$):</label>
+                <input type="number" name="renda" id="renda" placeholder="Digite sua renda bruta mensal" required>
+                <label for="emprestimo">Valor do Empréstimo (R$):</label>
+                <input type="number" name="emprestimo" id="emprestimo" placeholder="Digite o valor do Empréstimo" required>
+                <label for="prazo">Prazo do Empréstimo (Meses):</label>
+                <input type="number" name="prazo" id="prazo" placeholder="Digite o prazo em meses" required>
+                <button type="submit">Calcular Parcelas</button>
+            </form>
+            <div class="resultado" hidden>
+                <h2>Resultado</h2>
+                <p></p>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="js/script.js"></script>
+</html>

@@ -1,0 +1,178 @@
+/* ==== FORMATAÇÃO GERAL === */
+html{
+    font-size: clamp(1rem, 2vw + 0.8rem, 3rem);
+    font-family: "Inter", sans-serif;
+}
+body {
+    color: #012502;
+    background-color: #fdfdfd;
+    height: 100vh;
+}
+
+/* === Main === */
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main div.container {
+    box-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a;
+    padding: 0.65rem 0.8rem;
+    width: 12.5rem;
+    border: 2px #0c8e45 solid;
+    border-radius: 8px;
+}
+main div.container svg.gasolina {
+    display: block;
+    margin: auto;
+    fill: #0c8e45;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-bottom: 0.1rem;
+}
+main div.container h1 {
+    text-align: center;
+    font-size: 0.68rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+main div.container h2 {
+    text-align: center;
+    font-size: 0.35rem;
+    margin-bottom: 0.6rem;
+}
+main div.container form {
+    padding-block: 0.6rem;
+    border-block: 2px #f5f5f7 solid;
+}
+main div.container form > label {
+    font-size: 0.38rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    display: block;
+}
+main div.container form div.input-wraper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    border: 2px #e7e6eb solid;
+    border-radius: 8px;
+    transition: 100ms ease-in-out;
+}
+main div.container form div.input-wraper:hover {
+    border: 2px #b8b7ba solid;
+}
+main div.container form div.input-wraper:has(input[name="alcool"]:focus) {
+    border: 2px #0c8e45 solid;
+}
+main div.container form div.input-wraper:has(input[name="gasolina"]:focus) {
+    border: 2px #ecab1f solid;
+}
+main div.container form div.input-wraper input {
+    font-size: 0.37rem;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    padding: 0.3rem;
+    outline: none;
+    border-radius: 8px;
+    transition: 100ms ease-in-out;
+}
+main div.container form div.input-wraper label {
+    color: #676b74;
+    font-size: 0.33rem;
+    font-weight: 500;
+    line-height: 1.37;
+    display: block;
+    width: 1.1rem;
+    height: 100%;
+    background-color: #f9f9f9;
+    padding: 0.3rem;
+    outline: none;
+    border-left: 1px #e7e6eb80 solid;
+    border-radius: 0 6px 6px 0;
+}
+main div.container form div.input-wraper label[for="alcool"] {
+    background-color: #ecf6f0;
+}
+main div.container form div.input-wraper label[for="gasolina"] {
+    background-color: #fef5e6;
+}
+main div.container form button {
+    color: #fdfdfd;
+    font-size: 0.37rem;
+    font-weight: 500;
+    padding: 0.35rem;
+    width: 100%;
+    background-color: #0c8e45;
+    border-radius: 8px;
+    cursor: pointer;
+}
+main div.container div.resultado {
+    text-align: center;
+    font-size: 0.3rem;
+    padding: 0.35rem 2.2rem;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    margin-top: 0.3rem;
+}
+main div.container div.resultado div {
+    margin: auto;
+    width: 0.8rem;
+    height: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9499a1;
+    border-radius: 50%;
+    margin-bottom: 0.2rem;
+}
+main div.container div.resultado div svg {
+    display: block;
+    fill: #f7f7f7;
+    width: 0.4rem;
+    height: 0.4rem;
+}
+main div.container div.resultado h2 {
+    font-size: 0.4rem;
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+}
+main div.container div.resultado p {
+    color: #676b74;
+    font-weight: 500;
+}
+main div.container div.resultado p.razao {
+    color: #012502;
+    font-weight: 600;
+    margin: 0.1rem;
+    display: none;
+}
+main div.container div.resultado.alcool {
+    background-color: #ecf6f0;
+    border: 1px #0c8e45 solid;
+}
+main div.container div.resultado.alcool div {
+    display: none;
+}
+main div.container div.resultado.alcool h2 {
+    color: #0c8e45;
+}
+main div.container div.resultado.alcool p.razao {
+    display: block;
+}
+main div.container div.resultado.gasolina {
+    background-color: #fef5e6;
+    border: 1px #ecab1f solid;
+}
+main div.container div.resultado.gasolina div {
+    display: none;
+}
+main div.container div.resultado.gasolina h2 {
+    color: #ecab1f;
+}
+main div.container div.resultado.gasolina p.razao {
+    display: block;
+}

@@ -1,0 +1,225 @@
+/* ==== FORMATAÇÃO GERAL === */
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth
+}
+
+body {
+    color: #17243e;
+    background-color: #ffffff;
+    height: 100vh;
+}
+
+.container {
+    width: min(1400px, 91%);
+    margin: auto;
+}
+header {
+    background: white;
+}
+.topo {
+    min-height: 96px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+.logo {
+    font-weight: 800;
+    font-size: 25px;
+    text-decoration: none;
+    color: #17243e;
+}
+.logo img {
+    width: 155px;
+    height: 48px;
+    object-fit: contain;
+    display: block;
+}
+.topo h1, .topo p {
+    margin: 0;
+}
+.menu {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu a {
+    color: #536078;
+    text-decoration: none;
+    font-weight: 600;
+}
+.menu a:hover {
+    color: #1763f5;
+}
+.botao {
+    display: inline-block;
+    border: 0;
+    background: #1763f5;
+    color: white;
+    padding: 18px 33px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 700;
+}
+.botao:hover {
+    background: #064bd1;
+}
+.banner {
+    min-height: 490px;
+    background: linear-gradient(90deg, rgba(10, 27, 54, .87), rgba(10, 27, 54, .24)), url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1800&q=85') center/cover;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.banner h1 {
+    font-size: clamp(34px, 4vw, 58px);
+    line-height: 1.12;
+    margin: 0 0 34px;
+    max-width: 680px;
+}
+.banner p {
+    font-size: 20px;
+    margin: 14px 0;
+}
+.banner .botao {
+    margin-top: 30px;
+}
+.programacao {
+    padding: 48px 0 90px;
+}
+.programacao h2 {
+    font-size: 34px;
+    margin: 0;
+}
+.cards {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+.cards li {
+    overflow: hidden
+}
+.cards li img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+.cards li h3 {
+    font-size: 21px;
+    margin: 20px 0 8px
+}
+.cards li p {
+    color: #647087;
+    line-height: 1.6;
+    margin: 0 0 18px;
+}
+.cards li a {
+    color: #1763f5;
+    text-decoration: none;
+    font-weight: 700;
+}
+.sobre {
+    background: #f4f7fc;
+    padding: 55px 4.5% 55px max(4.5%, calc((100% - 1400px)/2));
+}
+.sobre p {
+    color: #56647a;
+    line-height: 1.8;
+    max-width: 800px;
+}
+footer {
+    background: #14233d;
+    color: #fff;
+    padding: 25px 0;
+    text-align: center;
+}
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    background: rgba(13, 25, 46, .58);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    display: grid;
+    place-items: center;
+    padding: 20px;
+}
+.overlay[hidden] {
+    display: none
+}
+.modal {
+    background: #fff;
+    color: #17243e;
+    border-radius: 12px;
+    padding: 46px 52px 38px;
+    width: min(578px, 100%);
+    position: relative;
+    text-align: center;
+    box-shadow: 0 16px 60px rgba(0, 0, 0, .18);
+}
+.fechar {
+    position: absolute;
+    top: 21px;
+    right: 23px;
+    background: none;
+    border: 0;
+    color: #728096;
+    font-size: 32px;
+    cursor: pointer;
+    line-height: 1;
+}
+.icone {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background: #e8f0ff;
+    color: #1763f5;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 24px;
+}
+.icone svg {
+    transform: scale(1.5);
+}
+.modal h2 {
+    font-size: 36px;
+    margin: 0 0 12px;
+    letter-spacing: -.8px;
+}
+.modal p {
+    color: #5c6981;
+    font-size: 22px;
+    line-height: 1.5;
+    margin: 0 0 36px;
+}
+.acoes {
+    display: flex;
+    gap: 16px;
+}
+.acoes button {
+    flex: 1;
+    padding: 19px 12px;
+    border-radius: 8px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.cancelar {
+    border: 2px solid #cbd2dd;
+    background: white;
+    color: #5b6780;
+}
+.confirmar {
+    border: 2px solid #1763f5;
+    background: #1763f5;
+    color: white;
+}

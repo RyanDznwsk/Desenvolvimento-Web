@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1><span>R$</span><span id="diaria">620</span> noite</h1>
+            <form>
+                <div class="check-in" id="check-in">
+                    <label for="check-in">Check-in</label>
+                    <input type="date" name="check-in" id="check-in">
+                </div>
+                <div id="check-out">
+                    <label for="check-out">Check-out</label>
+                    <input type="date" name="check-out" id="check-out">
+                </div>
+                <div class="hospedes" id="hospedes">
+                    <label for="hospedes">Hóspedes</label>
+                    <select name="hospedes" id="hospedes">
+                        <option value="1">1 hóspede</option>
+                        <option value="2">2 hóspedes</option>
+                        <option value="3">3 hóspedes</option>
+                        <option value="4">4 hóspedes</option>
+                    </select>
+                </div>
+            </form>
+            <div class="cupons">
+                <input type="text" name="cupons" id="cupons" placeholder="Cupom de Desconto (EX: OFF15)">
+                <button>Aplicar</button>
+            </div>
+            <button>Reservar</button>
+            <p class="aviso">
+                Você ainda não será cobrado
+            </p>
+            <ul>
+                <li>
+                    <span>R$ <span id="diaria">620</span> &times; <span id="noites"></span> noites</span>
+                    <span>R$<span id="valorDiaria"></span></span>
+                </li>
+                <li>
+                    <span>Taxa de limpeza</span>
+                    <span>R$<span id="valorLimpeza"></span></span>
+                </li>
+                <li>
+                    <span>Taxa de serviço do Airbnb</span>
+                    <span>R$<span id="valorServico"></span></span>
+                </li>
+            </ul>
+            <p class="total">
+                <span>Total sem impostos</span>
+                <span>R$<span id="valorTotal"></span></span>
+            </p>
+        </div>
+    </main>
+</body>
+<script src="js/script.js"></script>
+</html>

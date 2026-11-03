@@ -87,6 +87,11 @@ header nav ul.nav li.link div ul {
 header nav ul.nav li.link div ul li {
     color: #1e2833;
     font-size: 0.5rem;
+    transition: 100ms ease-in-out;
+}
+header nav ul.nav li.link div ul li:hover {
+    font-size: 0.55rem;
+    text-decoration: underline;
 }
 header nav ul.nav li.link div ul li a {
     display: inline-block;
