@@ -1,5 +1,6 @@
 let diaria = 620;
 let taxaLimpeza = 120;
+let cupom = 0;
 let diarias = document.querySelectorAll('.diaria');
 let hospedes = document.querySelector('select');
 let checkIn = document.getElementById('check-in');
@@ -9,18 +10,47 @@ let valorDiaria = document.getElementById('valorDiaria');
 let valorServico = document.getElementById('valorServico');
 let valorTotal = document.getElementById('valorTotal');
 let cupons = document.getElementById('cupons');
-let btnCupons = document.querySelector('div.cupons button')
+let btnCupons = document.querySelector('div.cupons button');
 
 diarias.forEach(element => {
     element.innerText = diaria;
 });
 
 btnCupons.addEventListener('click', () => {
+    let codigo = cupons.value.trim().toUpperCase();
 
+    if (codigo.startsWith('OFF')) {
+        let valor = codigo.replace('OFF', '');
+        let valorCupom = Number(valor);
 
-    if (checkIn.value && checkOut.value && dias > 0) {
-        let total = (valorDiarias + taxaLimpeza + taxaServico) * cupom;
-        valorTotal.innerText = total.toFixed(2);
+        if (!isNaN(valorCupom) && valorCupom >= 0 && valorCupom <= 100) {
+            cupom = valorCupom / 100;
+        } else {
+            cupom = 0;
+        }
+    } else {
+        cupom = 0;
+    }
+
+    if (checkIn.value && checkOut.value) {
+        let data1 = new Date(checkIn.value);
+        let data2 = new Date(checkOut.value);
+        let diferenca = data2 - data1;
+        let dias = Math.round(diferenca / 86400000);
+        let diariaAtualizada = diaria + diaria * (Number(hospedes.value) / 100);
+
+        if (dias > 0) {
+            let valorDiarias = diariaAtualizada * dias;
+            let taxaServico = valorDiarias * 0.15;
+            
+            let total = valorDiarias + taxaLimpeza + taxaServico;
+            let totalFinal = total - (total * cupom);
+
+            noites.innerText = dias;
+            valorDiaria.innerText = valorDiarias;
+            valorServico.innerText = taxaServico.toFixed(2);
+            valorTotal.innerText = totalFinal.toFixed(2);
+        }
     }
 });
 
@@ -33,16 +63,19 @@ hospedes.addEventListener('change', () => {
         let data2 = new Date(checkOut.value);
         let diferenca = data2 - data1;
         let dias = Math.round(diferenca / 86400000);
-        
+        let diariaAtualizada = diaria + diaria * (Number(hospedes.value) / 100);
+
         if (dias > 0) {
-            let valorDiarias = diariaAtualizada * dias; 
+            let valorDiarias = diariaAtualizada * dias;
             let taxaServico = valorDiarias * 0.15;
+            
             let total = valorDiarias + taxaLimpeza + taxaServico;
-    
+            let totalFinal = total - (total * cupom);
+
             noites.innerText = dias;
             valorDiaria.innerText = valorDiarias;
             valorServico.innerText = taxaServico.toFixed(2);
-            valorTotal.innerText = total.toFixed(2);
+            valorTotal.innerText = totalFinal.toFixed(2);
         }
     }
 });
@@ -55,16 +88,19 @@ checkIn.addEventListener('change', () => {
         let data2 = new Date(checkOut.value);
         let diferenca = data2 - data1;
         let dias = Math.round(diferenca / 86400000);
-        
+        let diariaAtualizada = diaria + diaria * (Number(hospedes.value) / 100);
+
         if (dias > 0) {
             let valorDiarias = diariaAtualizada * dias;
             let taxaServico = valorDiarias * 0.15;
+            
             let total = valorDiarias + taxaLimpeza + taxaServico;
+            let totalFinal = total - (total * cupom);
 
             noites.innerText = dias;
             valorDiaria.innerText = valorDiarias;
             valorServico.innerText = taxaServico.toFixed(2);
-            valorTotal.innerText = total.toFixed(2);
+            valorTotal.innerText = totalFinal.toFixed(2);
         }
     }
 });
@@ -77,16 +113,19 @@ checkOut.addEventListener('change', () => {
         let data2 = new Date(checkOut.value);
         let diferenca = data2 - data1;
         let dias = Math.round(diferenca / 86400000);
-        
+        let diariaAtualizada = diaria + diaria * (Number(hospedes.value) / 100);
+
         if (dias > 0) {
             let valorDiarias = diariaAtualizada * dias;
             let taxaServico = valorDiarias * 0.15;
+            
             let total = valorDiarias + taxaLimpeza + taxaServico;
+            let totalFinal = total - (total * cupom);
 
             noites.innerText = dias;
             valorDiaria.innerText = valorDiarias;
             valorServico.innerText = taxaServico.toFixed(2);
-            valorTotal.innerText = total.toFixed(2);
+            valorTotal.innerText = totalFinal.toFixed(2);
         }
     }
 });
